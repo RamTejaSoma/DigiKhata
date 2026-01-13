@@ -162,14 +162,14 @@ const MoneyTxn = () => {
       const response = await axios.get(
         `${backendUrl}/api/moneyTransaction/reportPdf?${params}`,
         {
-          headers: { token: token_exp },;
+          headers: { token: token_exp },
           responseType: "blob", // important
         }
       );
 
       // Create a blob and a temporary download link
       const blob = new Blob([response.data], { type: "application/pdf" });
-      const url = window.URL.createObjectURL(blob);
+      const url = window.URL.createObjectURL(blob)
 
       const a = document.createElement("a");
       a.href = url;
