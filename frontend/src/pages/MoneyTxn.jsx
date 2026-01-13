@@ -162,7 +162,7 @@ const MoneyTxn = () => {
       const response = await axios.get(
         `${backendUrl}/api/moneyTransaction/reportPdf?${params}`,
         {
-          headers: { token: token_exp },
+          headers: { token: token_exp },;
           responseType: "blob", // important
         }
       );

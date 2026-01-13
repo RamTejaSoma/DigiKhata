@@ -63,7 +63,7 @@ const BusinessItem = () => {
         toast.success("Transaction deleted successfully!");
       } else {
       //  // console.log(data.message);
-        toast.error(data.message);
+        toast.error(data.message
       }
     } catch (err) {
       console.error("Error fetching data:", err);

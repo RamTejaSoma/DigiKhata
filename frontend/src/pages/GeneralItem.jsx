@@ -166,7 +166,7 @@ const GeneralItem = () => {
     }
   };
   useEffect(() => {
-    fetchTransactions();
+    fetchTransactions()
     
     
   }, [backendUrl, token_exp, item]);
