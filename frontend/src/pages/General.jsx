@@ -33,10 +33,10 @@ const General = () => {
       });
       if (data.success) {
         setTransactions(data.data);
-        //// console.log(transactions);
-       // // console.log(data);
+        //console.log(transactions);
+       // console.log(data);
       } else {
-        //// console.log(data.message);
+        //console.log(data.message);
         toast.error(data.message);
       }
     } catch (error) {
@@ -49,7 +49,7 @@ const General = () => {
   }, [backendUrl, token_exp]);
   
   useEffect(() => {
-   // // console.log("Transactions updated:", transactions);
+   // console.log("Transactions updated:", transactions);
   }, [transactions]);
 
   // Format date like "12 Mar 2025"
@@ -71,7 +71,7 @@ const General = () => {
 
         toast.success("Transaction deleted successfully!");
       } else {
-       // // console.log(data.message);
+       // console.log(data.message);
         toast.error(data.message);
       }
     } catch (err) {
@@ -82,7 +82,7 @@ const General = () => {
 
   const submitFilter = async (e) => {
     e.preventDefault();
-    //// console.log("Filter applied:", filter);
+    //console.log("Filter applied:", filter);
 
     const filtersToSend = {};
     if (filter.subCategory) {
@@ -98,7 +98,7 @@ const General = () => {
       filtersToSend.toDate = filter.toDate;
     }
 
-   // // console.log("Applying filters:", filtersToSend);
+   // console.log("Applying filters:", filtersToSend);
 
     try {
       const params = new URLSearchParams(filtersToSend).toString();
@@ -114,7 +114,7 @@ const General = () => {
         setTransactions(data.data);
         toast.success("Filter Applied Succesfully");
       } else {
-        //// console.log("Error:", data.message);
+        //console.log("Error:", data.message);
         toast.error(data.message);
       }
     } catch (err) {
@@ -134,7 +134,7 @@ const General = () => {
 
   const submitFilter_report = async (e) => {
     e.preventDefault();
-   // // console.log("Filter applied:", filter_report);
+   // console.log("Filter applied:", filter_report);
 
     const filtersToSend = {};
     if (filter_report.subCategory) {
@@ -150,7 +150,7 @@ const General = () => {
       filtersToSend.toDate = filter_report.toDate;
     }
 
-    //// console.log("Applying filters:", filtersToSend);
+    //console.log("Applying filters:", filtersToSend);
 
     setLoadingPdf(true);
 

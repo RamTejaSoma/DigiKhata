@@ -43,7 +43,7 @@ const BusinessAdd = () => {
           unitPrice: "",
           vendor: "",
         });
-      //  // console.log(data.data);
+      //  console.log(data.data);
         await fetchBusinessSubcategories();
 
         navigate("/business");
@@ -60,7 +60,7 @@ const BusinessAdd = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Submitting item:", item);
+    console.log("Submitting item:", item);
     addTransaction();
   };
   const handleSubCategoryChange = (e) => {
