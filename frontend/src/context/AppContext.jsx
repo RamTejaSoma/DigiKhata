@@ -10,7 +10,7 @@ const AppContextProvider = (props) => {
       ? localStorage.getItem("token_exp")
       : false
   );
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://digikhata-backend.onrender.com";
 
   const [items, setItems] = useState([]);
   const [items_bus, setItems_bus] = useState([]);
